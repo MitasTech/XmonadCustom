@@ -79,7 +79,7 @@ clear
 #	(cd ~/.srcs/$HELPER/ && makepkg -si )
 fi
 
-$HELPER -S picom-jonaburg-git\
+$yay -S picom-jonaburg-git\
 	   acpi              \
 	   candy-icons-git   \
 	   wmctrl            \

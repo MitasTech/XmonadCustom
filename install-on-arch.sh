@@ -1,10 +1,21 @@
 #!/bin/env bash
 set -e
 
-echo "Welcome!" && sleep 2
+echo "
+------------------------------------------------------------------------------------------------
+██╗  ██╗███╗   ███╗ ██████╗ ███╗   ██╗ █████╗ ██████╗     ███╗   ███╗██╗████████╗ █████╗ ███████╗
+╚██╗██╔╝████╗ ████║██╔═══██╗████╗  ██║██╔══██╗██╔══██╗    ████╗ ████║██║╚══██╔══╝██╔══██╗██╔════╝
+ ╚███╔╝ ██╔████╔██║██║   ██║██╔██╗ ██║███████║██║  ██║    ██╔████╔██║██║   ██║   ███████║███████╗
+ ██╔██╗ ██║╚██╔╝██║██║   ██║██║╚██╗██║██╔══██║██║  ██║    ██║╚██╔╝██║██║   ██║   ██╔══██║╚════██║
+██╔╝ ██╗██║ ╚═╝ ██║╚██████╔╝██║ ╚████║██║  ██║██████╔╝    ██║ ╚═╝ ██║██║   ██║   ██║  ██║███████║
+╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝╚═════╝     ╚═╝     ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝
+-------------------------------------------------------------------------------------------------
+				  XMONAD Custom Window Manager
+-------------------------------------------------------------------------------------------------
+" && sleep 2
 
 #Default vars
-HELPER="paru"
+#HELPER="paru"
 
 # does full system update
 echo "Doing a system update, cause stuff may break if it's not the latest version..."
@@ -53,19 +64,19 @@ cp -r ./fonts/* ~/.local/share/fonts/
 fc-cache -f
 clear 
 
-echo "We need an AUR helper. It is essential. 1) paru       2) yay"
-read -r -p "What is the AUR helper of your choice? (Default is paru): " num
+#echo "We need an AUR helper. It is essential. 1) paru       2) yay"
+#read -r -p "What is the AUR helper of your choice? (Default is paru): " num
 
-if [ $num -eq 2 ]
-then
-    HELPER="yay"
-fi
+#if [ $num -eq 2 ]
+#then
+#    HELPER="yay"
+#fi
 
-if ! command -v $HELPER &> /dev/null
-then
-    echo "It seems that you don't have $HELPER installed, I'll install that for you before continuing."
-	git clone https://aur.archlinux.org/$HELPER.git ~/.srcs/$HELPER
-	(cd ~/.srcs/$HELPER/ && makepkg -si )
+#if ! command -v $HELPER &> /dev/null
+#then
+#    echo "It seems that you don't have $HELPER installed, I'll install that for you before continuing."
+#	git clone https://aur.archlinux.org/$HELPER.git ~/.srcs/$HELPER
+#	(cd ~/.srcs/$HELPER/ && makepkg -si )
 fi
 
 $HELPER -S picom-jonaburg-git\

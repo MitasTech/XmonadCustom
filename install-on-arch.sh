@@ -22,7 +22,7 @@ echo "Doing a system update, cause stuff may break if it's not the latest versio
 sudo pacman --noconfirm -Syu
 
 echo "###########################################################################"
-echo "Will do stuff, get ready"
+echo "			Put on your seatbelt. We gon fly baby!"
 echo "###########################################################################"
 
 # install base-devel if not installed

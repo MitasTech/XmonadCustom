@@ -82,10 +82,10 @@ These are the basic keybinds. Read through the `xmonad/xmonad.hs` file for more 
 
 |        Keybind         |                 Function                 |
 | ---------------------- | ---------------------------------------- |
-| `Win + Shift + Enter`  | Launch terminal (alacritty)              |
-| `Win + Shift + C`      | Close window                             |
+| `Win + x`              | Launch terminal (alacritty)              |
+| `Win + q`              | Close window                             |
 | `Win + O`              | Open rofi menu                           |
-| `Win + Shift + Q`      | Open rofi powermenu                      |
+| `Win + Escape`         | Open rofi powermenu                      |
 | `Win + S`              | Open sidebar                             |
 | `Win + Shift + S`      | Close sidebar                            |
 | `Win + P`              | Open dashboard                           |

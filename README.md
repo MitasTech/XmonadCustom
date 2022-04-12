@@ -82,7 +82,7 @@ These are the basic keybinds. Read through the `xmonad/xmonad.hs` file for more 
 
 |        Keybind         |                 Function                 |
 | ---------------------- | ---------------------------------------- |
-| `Win + x`              | Launch terminal (alacritty)              |
+| `Win + x`              | Launch terminal (kitty)              |
 | `Win + q`              | Close window                             |
 | `Win + O`              | Open rofi menu                           |
 | `Win + Escape`         | Open rofi powermenu                      |
@@ -91,7 +91,7 @@ These are the basic keybinds. Read through the `xmonad/xmonad.hs` file for more 
 | `Win + P`              | Open dashboard                           |
 | `Win + Shift + P`      | Close dashboard                          |
 | `Win + B`              | Toggle the main bars                     |
-| `Win + Z`              | Activate inhibitor (Stops autolocking)   |
+| `Win + Z`              | Launch emacs   |
 | `Win + Shift + Z`      | Dectivate inhibitor (Enables autolocking)|
 | `Win + Ctrl + G`       | Toggle gaps (toggle to get screen space) |
 | `Win + J`              | Navigate through windows                 |

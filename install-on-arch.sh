@@ -64,20 +64,20 @@ cp -r ./fonts/* ~/.local/share/fonts/
 fc-cache -f
 clear 
 
-#echo "We need an AUR helper. It is essential. 1) paru       2) yay"
-#read -r -p "What is the AUR helper of your choice? (Default is paru): " num
+echo "We need an AUR helper. It is essential. 1) paru       2) yay"
+read -r -p "What is the AUR helper of your choice? (Default is paru): " num
 
-#if [ $num -eq 2 ]
-#then
-#    HELPER="yay"
-#fi
+if [ $num -eq 2 ]
+then
+    HELPER="yay"
+fi
 
-#if ! command -v $HELPER &> /dev/null
-#then
-#    echo "It seems that you don't have $HELPER installed, I'll install that for you before continuing."
-#	git clone https://aur.archlinux.org/$HELPER.git ~/.srcs/$HELPER
-#	(cd ~/.srcs/$HELPER/ && makepkg -si )
-#fi
+if ! command -v $HELPER &> /dev/null
+then
+    echo "It seems that you don't have $HELPER installed, I'll install that for you before continuing."
+	git clone https://aur.archlinux.org/$HELPER.git ~/.srcs/$HELPER
+	(cd ~/.srcs/$HELPER/ && makepkg -si )
+fi
 
 $HELPER -S picom-jonaburg-git\
 	   acpi              \
@@ -92,7 +92,39 @@ $HELPER -S picom-jonaburg-git\
 	   maim              \
 	   rofi-greenclip    \
 	   xautolock         \
-	   betterlockscreen
+	   betterlockscreen  \
+       autojump          \
+       brave-bin         \
+       google-chrome     \
+       ice-ssb           \
+       touchegg          \
+       timeshift         \
+       lightdm           \
+       lightdm-webkit2-greeter   \
+       lightdm-webkit-theme-aether \
+       bridge-utils     \
+       dxvk-bin         \
+       github-desktop-bin\
+       lightly-git\
+       lightlyshaders-git\
+       mangohud\
+       mangohud-common\
+       nerd-fonts-fira-code\
+       nordic-darker-standard-buttons-theme\
+       nordic-darker-theme\
+       nordic-kde-git\
+       nordic-theme\
+       ocs-url\
+       plymouth-git\
+       sddm-nordic-theme-git\
+       snapper-gui-git\
+       ttf-meslo\
+       vde2\
+       zoom\
+       whatsapp-nativefier\
+       konsave\
+       stacer\
+       kitty \
 
 #install custom picom config file 
 mkdir -p ~/.config/
@@ -154,7 +186,7 @@ mkdir -p ~/.config/
     fi
     if [ -d ~/wallpapers ]; then
         echo "Adding wallpaper to ~/wallpapers..."
-        cp ./wallpapers/yosemite-lowpoly.jpg ~/wallpapers/;
+        cp ./wallpapers/archpacman.png ~/wallpapers/;
     else
         echo "Installing wallpaper..."
         mkdir ~/wallpapers && cp -r ./wallpapers/* ~/wallpapers/;
@@ -216,6 +248,12 @@ mkdir -p ~/.config/
     fi
     
 
+git clone https://github.com/MitasTech/BootloaderThemes
+cd ~/BootloaderThemes
+sudo su
+./install.sh
+1
+systemctl enable lightdm
 # done 
 echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your Display Manager (ie. lightdm or sddm, etc.)" | tee ~/Note.txt
 printf "\n" >> ~/Note.txt

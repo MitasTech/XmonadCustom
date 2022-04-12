@@ -1,10 +1,10 @@
 /*
  *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- * Edited for this particular configuration by Axarva.
+ * Author  : Stelios Mitas
+ * Mail    : TechMitas@gmail.com
+ * Github  : @MitasTech
+ * Twitter : @SteliosMitas
+ * Edited for this particular configuration by Stelios Mitas.
  */
 
 configuration {
@@ -41,7 +41,7 @@ prompt {
 
 textbox-prompt-colon {
 	expand: 						true;
-	str: 							"Goodbye, Axarva";
+	str: 							"Goodbye, Mitas!";
 	background-color: 				@background;
 	text-color: 					@selected;
     padding:                        3% 0.5% 0% 0%;
